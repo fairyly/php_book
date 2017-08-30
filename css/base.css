@@ -1,0 +1,63 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+input {
+    outline: none;
+    border: 1px solid #ccc;
+    color: #333;
+    height: 38px;
+    line-height: 38px;
+}
+
+input::-webkit-input-placeholder{color:#ccc}
+input::-moz-placeholder{color:#ccc}
+input:-moz-placeholder{color:#ccc}
+input::-ms-placeholder{color:#ccc}
+input:-o-placeholder{color:#ccc}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    outline: none;
+}
+
+.reg-contain {
+    width: 100%;
+}
+.reg-contain h1 {
+    text-align: center;
+}
+.reg-form {
+    width: 320px;
+    margin: 0px auto;
+}
+.reg-form div {
+    margin-bottom: 20px;
+}
+.reg-form div input {
+    width: 100%;
+}
+
+.login-form {
+    width: 600px;
+    margin: 0px auto;
+}
+.login-form h1 {
+    text-align: center;
+}
+
+.login-form div {
+    margin-bottom: 20px;
+}
+
+.login-form input {
+    width: 100%;
+}
