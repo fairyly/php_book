@@ -14,7 +14,7 @@ include_once('header.php');
             <div><input type="text" name="authcode" placeholder="验证码" ><img id="captcha_img" border='1' src='./very.php?r=echo rand(); ?>'  />
                 <a href="javascript:void(0)" onclick="document.getElementById('captcha_img').src='./very.php?r='+Math.random()">换一个?<a></div>
             <div><input type="submit" value="注册"/></div>
-            <div><span>已经注册，请</span><a href="./login.php">点击登录</a></div>
+            <div><span>已经已经有账号了?请</span><a href="./login.php">立即登录</a></div>
         </form>
     </div>
 </div>

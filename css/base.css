@@ -61,3 +61,19 @@ button {
 .login-form input {
     width: 100%;
 }
+
+
+.bookadd {
+    width: 600px;
+    margin: 0px auto;
+    padding-top: 50px;
+}
+
+.bookadd div {
+    margin-bottom: 20px;
+}
+
+.bookadd input {
+    width: 100%;
+    padding: 0px 10px;
+}
