@@ -28,18 +28,26 @@ $conn->query("set names utf8");//编码
 
 $conn ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);//设置以异常的形式报错
 $conn ->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE , PDO::FETCH_ASSOC );//设置fetch时返回数据形式为数组
-$sql = "select * from users where uname='".$uname."' and upass='.".$upass."'";
+$sql = "select * from users where uname='".$uname."' and upass='".$upass."'";
 
 $sel = $conn->prepare($sql);
 $rs = $sel->execute();
 
-if($rs){
+// for($i=0; $row = $sel->fetch(); $i++){
+//     echo $i." - ".$row['uname']."<br/>";
+// }
+
+
+// var_dump($row = $sel->fetch());
+// exit;
+
+if($sel->fetch()){
     echo "<script language=\"javascript\">";
     echo "document.location=\"../book.php\"";
     echo "</script>";
 }else{
     echo "<script language=\"javascript\">";
-    echo "alert('注册成功!');";
+    echo "alert('用户名或密码不正确!');";
     echo "document.location=\"../login.php\"";
     echo "</script>";
 }

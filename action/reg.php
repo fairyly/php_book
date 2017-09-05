@@ -55,7 +55,7 @@ if(isset($_REQUEST['authcode'])){
         $query = "insert into users values (NULL,'".$uname."','".$uemail."','".$upass."','".$date."')"; //插入id自增数据        
         $sel = $conn->prepare($sql);
         $rs = $sel->execute();
-        if($rs){
+        if($sel->fetch()){
             echo "<script language=\"javascript\">";
             echo "alert('用户名已存在!');";
             echo "document.location=\"../reg.php\"";
