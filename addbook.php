@@ -2,6 +2,13 @@
 
 include_once('header.php');
 
+if (isset($_SESSION['uname'])) {
+    echo "<script language=\"javascript\">";
+    echo "alert('请登录');";
+    echo "document.location=\"./login.php\"";
+    echo "</script>";
+}
+
 ?>
 
 <div class="bookadd">

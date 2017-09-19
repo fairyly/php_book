@@ -38,7 +38,7 @@ include_once('./action/booklist.php');
                     echo "<td>".$value['price']."</td>";
                     echo "<td>".$value['description']."</td>";
                     echo "<td><a href='modify.php?id=".$value['id']."'>修改</a></td>";
-                    echo "<td><a href='del.php?id=".$value['id']."'>删除</a></td>";
+                    echo "<td><a href='del.php?id=".$value['id']."&page=".$page."'>删除</a></td>";
                     echo "</tr>";
                 }
             ?>

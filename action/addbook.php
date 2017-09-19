@@ -49,7 +49,7 @@ include('../connect.php');//引入数据库连接
         $date = date('Y-m-d H:i:s');
         $conn ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);//设置以异常的形式报错
         $conn ->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE , PDO::FETCH_ASSOC );//设置fetch时返回数据形式为数组
-        $sql = "select * from books where $isbn='".$isbn."'";
+        $sql = "select * from books where isbn='".$isbn."'";
         $query = "insert into books values (NULL,'".$isbn."','".$author."','".$title."','".$catid."','".$price."','".$description."')"; //插入id自增数据        
         $sel = $conn->prepare($sql);
         $rs = $sel->execute();
@@ -79,7 +79,6 @@ include('../connect.php');//引入数据库连接
             echo "an error occurred";
         }
 
-    
 
 
  ?>

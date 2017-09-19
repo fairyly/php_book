@@ -13,4 +13,5 @@ $dbname = 'book_sc';
 
 $dns = "mysql:host=$host;dbname=$dbname";
 
+
 ?>
