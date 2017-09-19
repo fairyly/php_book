@@ -1,12 +1,13 @@
 <?php 
 
 header("Content-type: text/html; charset=UTF-8");
-error_reporting(0);// 关闭错误报告 
+// error_reporting(0);// 关闭错误报告 
 
 include('../connect.php');//引入数据库连接
-
+session_start();
 $uname = trim($_POST['uname']);
 $upass = trim($_POST['upass']);
+
 
 if (!$uname || !$upass) {
     # code...
@@ -23,6 +24,7 @@ if (!get_magic_quotes_gpc()) {
     $upass = addslashes($_POST['upass']);
 }
 
+$_SESSION['uname'] = $uname;
 $conn = new PDO($dns,$user,$pass);
 $conn->query("set names utf8");//编码 
 
@@ -43,7 +45,7 @@ $rs = $sel->execute();
 
 if($sel->fetch()){
     echo "<script language=\"javascript\">";
-    echo "document.location=\"../book.php\"";
+    echo "document.location=\"../book.php?page=1\"";
     echo "</script>";
 }else{
     echo "<script language=\"javascript\">";
